@@ -28,9 +28,9 @@ start = time.perf_counter()
 Cython_example.test_multicore(x)
 cy_multicore = time.perf_counter() - start
 
-print(py)
+print(f"Pure python: {py} s")
 print(f"cy je {(py/cy_pure)} rychlejší než py")
 print(f"cy_datatypes je {(py/cy_datatypes)} rychlejší než py")
-print(f"cy_cmath je {(py/cy_cmath)} rychlejší než py")
-print(f"cy_nogil je {(py/cy_nogil)} rychlejší než py")
+print(f"cy_cmath je {(py/cy_cmath)} {cy_cmath/1000} rychlejší než py")
+print(f"cy_nogil je {(py/cy_nogil)} {cy_nogil/1000} rychlejší než py")
 print(f"cy_multicore je {(py/cy_multicore)} rychlejší než py")
